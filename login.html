@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - Kriti Classes</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="classes.html">Classes</a>
+<a href="login.html">Login</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section class="section">
+<h2>Student Login</h2>
+
+<div class="card">
+<input type="text" id="s_name" placeholder="Student Name">
+<input type="text" id="s_class" placeholder="Class">
+<input type="text" id="s_mobile" placeholder="Mobile Number">
+<input type="text" id="s_city" placeholder="City / Village">
+<button onclick="studentLogin()">Send OTP</button>
+<p id="studentOtp"></p>
+</div>
+
+<h2>Teacher Login</h2>
+
+<div class="card">
+<input type="text" id="t_name" placeholder="Teacher Name">
+<input type="text" id="t_qual" placeholder="Qualification">
+<input type="text" id="t_mobile" placeholder="Mobile Number">
+<input type="text" id="t_city" placeholder="City / Village">
+<button onclick="teacherLogin()">Send OTP</button>
+<p id="teacherOtp"></p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Kriti Classes
+</footer>
+<!-- ===== Premium Page Load Animation ===== -->
+
+<style>
+.section{
+    position:relative;
+    overflow:hidden;
+}
+
+/* Student Top Animation */
+.section .card:first-of-type{
+    transform:translateY(-100%);
+    opacity:0;
+    animation:slideDown 1.2s ease forwards;
+}
+
+/* Teacher Bottom Animation */
+.section .card:last-of-type{
+    transform:translateY(100%);
+    opacity:0;
+    animation:slideUp 1.2s ease forwards;
+    animation-delay:0.3s;
+}
+
+/* Girl Image */
+
+/* Animations */
+@keyframes slideDown{
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes slideUp{
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+
+</style>
+
+<!-- ===== End Animation ===== -->
+
+</body>
+</html>
